@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+  background-color: #030111;
+  height: 100%;
+  width : 100%;
+}
+
+/****************************** Font ****************************/
+
+@font-face {
+  font-family: 'FuturaMdBt';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura Md BT'), url('../../public/fonts/FuturaMediumBT.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amiga';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Amiga'), url('../../public/fonts/amiga4ever.ttf') format('truetype');
+}
+
+/****************************** Theme ***************************/
+
+.font-amiga {
+  font-family: 'Amiga';
+}
+
+.theme-bg-color {
+  background-color: #74377a;
+}
+
+.theme-bg-active-color {
+  background-color: #8a4491;
+}
+
+.theme-active-color {
+  color: white;
+}
+
+.theme-border-radius {
+  border-radius: 5px;
+}
+
+.theme-header-link {
+  color: white;
+  font-size: 18px;
+}
+
+.theme-header-link:hover {
+  color: rgb(192, 192, 192);
+}
+
+.theme-section-background {
+  background-color: #030111;
+}
+
+.theme-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  background: linear-gradient(#74377a 90%, #74377a, #532757);
+}
+
+@media(max-width: 768px) {
+  .theme-header {
+    height: 70px;
+  }
+}
+
+section {
+  position: relative;
+  padding-top: 90px;
+  width: 100%;
+}
+
+@media(max-width: 768px) {
+  section {
+    padding-top: 60px;
+    width: 100%;
+  }
+}
+
+/************************************** Header **************************/
+
+.button-connect {
+  color: white !important;
+  background: transparent !important;
+  border: 1px white solid !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  width: 200px !important;
+  height: 50px !important;
+  justify-content: center !important;
+}
+
+.button-stake {
+  color: white !important;
+  background: transparent !important;
+  border: 1px white solid !important;
+  border-radius: 5px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  width: 100px !important;
+  height: 40px !important;
+  justify-content: center !important;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Amiga';
+}
+
+@media(max-width: 1280px) {
+  .header-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media(max-width: 768px) {
+  .button-connect {
+    font-size: 14px !important;
+    height: 35px !important;
+  }
+}
+
+.button-connect:hover {
+  background-color: white !important;
+  color: #74377a !important;
+}
+
+.button-stake:hover {
+  background-color: white !important;
+  color: #74377a !important;
+}
+
+.header-menu-item {
+  border-bottom: solid 1px #969696;
+  padding: 5px;
+}
+
+.phase-panel {
+  border-left: 2px solid #74377a;
+  padding-left: 30px;
+}
+
+.z-order-background {
+  position: relative;
+  z-index: 0;
+}
+
+.z-order-content {
+  position: relative;
+  z-index: 1;
+}
+
+.z-order-top {
+  position: relative;
+  z-index: 2;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/************************* Section *****************************/
+.background-overview-section {
+  background: linear-gradient(to bottom, transparent, #030111), url('../../public/images/background.png') no-repeat;
+  background-size: 100vw auto;
+}
+
+.remove-watermark {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #030111;
+}
+
+.outer-glow {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #fff;
+}
+
+.overview-title {
+  font-size: 62px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Amiga';
+}
+
+.overview-desc {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@media(max-width: 1280px) {
+  .overview-title {
+    font-size: 36px;
+  }
+
+  .overview-desc {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.overview-desc-panel {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.presale-title {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Amiga';
+}
+
+.presale-desc {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: 'Amiga';
+}
+
+@media(max-width: 1280px) {
+  .presale-title {
+    font-size: 18px;
+  }
+
+  .presale-desc {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.panel-mint-timer {
+  width: 100%;
+  text-align: center;
+}
+
+.text-color-theme {
+  color: #74377a;
+}
+
+.text-timer-big {
+  font-size: 62px;
+  color: white;
+}
+
+.text-timer-small {
+  font-size: 31px;
+  color: white;
+}
+
+.team-title {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Amiga';
+}
+
+@media(max-width: 1280px) {
+  .team-title {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 1280px) {
+  .text-timer-big {
+    font-size: 32px;
+  }
+  
+  .text-timer-small {
+    font-size: 16px;
+  }
+}
+
+.loader {
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top: 5px solid white;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.input-number {
+  background: transparent;
+  color: white;
+  border: solid 1px white !important;
+  border-radius: 5px;
+  text-align: center;
+  width: 60%;
+}
+
+.panel-faq {
+  position: relative;
+  z-index: 1;
+}
+
+.faq {
+  background: transparent;
+  border-bottom: solid 1px #74377a;
+  color: white;
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+.faq-header {
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.faq-content {
+  display: none;
+  z-index: 1;
+}
+
+.faq-icon {
+  position: relative;
+  align-items: center;
+  flex: 1 auto;
+  display: flex;
+  justify-content: right;
+  z-index: 1;
+}
+
+.active-faq-content {
+  font-size: 24px;
+  padding: 10px 0;
+  display: block;
+  z-index: 1;
+  font-style: italic;
+}
+
+.background-color-tint-black {
+  background-color: rgb(27 25 24);
+}
+
+@media(max-width: 1280px) {
+  .faq-header {
+    font-size: 18px;
+  }
+
+  .active-faq-content {
+    font-size: 14px;
+  }
+}
+
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+blockquote {
+  quotes: "“" "”" "‘" "’";
+}
